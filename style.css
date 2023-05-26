@@ -1,0 +1,27 @@
+/*Color pallate*/
+/*light yellow #e9f089*/
+
+body {
+}
+
+.container {
+  display: inline-block;
+  background: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 7px;
+}
+
+.square {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-family: Arial;
+  font-size: 3rem;
+  font-weight: bold;
+  background: white;
+}
