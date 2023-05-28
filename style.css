@@ -25,3 +25,18 @@ body {
   font-weight: bold;
   background: white;
 }
+
+.gameOver {
+  height: 50px;
+  width: 300px;
+  background: white;
+  color: blue;
+  margin: 50px;
+  font-size: 2rem;
+}
+
+#playAgain {
+  display: none;
+  padding: 10px;
+  margin-bottom: 20px;
+}
