@@ -1,19 +1,43 @@
 /*Color pallate*/
 /*light yellow #e9f089*/
 /*#f14e4e - red - 'Game Over'*/
-/*#f14e4e - Yellow - 'Player'*/
-/*#f14e4e - limegreen - ''*/
-/*#f14e4e - green - ''*/
-/*#f14e4e - blue - ''*/
-/*#f14e4e - purple - ''*/
-/*#f14e4e - pink - ''*/
+/*#f1bb4e - Yellow - 'Player'*/
+/*#84f14e - limegreen - ''*/
+/*#4efl8f - green - ''*/
+/*#4e9afl - blue - ''*/
+/*9a4efl - purple - ''*/
+/*#f14ebd - pink - ''*/
+/*#ded9d1 - lt grey - ''*/
 
 body {
 }
 
 .container {
+  display: grid;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  background: #ded9d1;
+  justify-content: center;\
+  
+}
+
+.title {
+  padding-top: 40px;
+  text-align: center;
+  color: #f14ebd;
+}
+
+.gridContainer {
+  padding-bottom: 60px;
+  margin: auto;
+
+}
+
+.background {
   display: inline-block;
   background: black;
+  
 }
 
 .grid {
@@ -23,6 +47,29 @@ body {
   grid-gap: 7px;
 }
 
+.player {
+  border-radius:10px;
+  text-align: center;
+  padding: 0px 20px;
+  margin-bottom: 20px;
+
+}
+
+
+.blink {
+  animation: blinker 1s linear infinite;
+  
+
+   
+  font-weight:bold;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 .square {
   justify-content: center;
   align-items: center;
@@ -30,26 +77,31 @@ body {
   font-family: Arial;
   font-size: 3rem;
   font-weight: bold;
-  background: white;
+  background: #ded9d1;
 }
 
 .gameOver {
+  font-size 5rem;
+  font-weight: bold;
   height: 50px;
   width: 300px;
-  background: white;
+  background: #ded9d1;
   color: blue;
-  margin: 50px;
+  margin: auto;
+  text-align: center;
   font-size: 2rem;
 }
 
 #playAgain {
   display: none;
   padding: 10px;
+  margin: auto;
   margin-bottom: 20px;
 }
 
 button {
   display: inline-block;
+  
   border: 0.16em solid rgba(255, 255, 255, 0);
   padding: 5px 10px;
   border-radius: 2em;
