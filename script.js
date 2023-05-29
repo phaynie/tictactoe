@@ -131,6 +131,12 @@ function newGame(event) {
   document.getElementById('pos8').innerHTML='&nbsp';
   document.getElementById('pos9').addEventListener('click', squareClicked); 
   document.getElementById('pos9').innerHTML='&nbsp';
+  gameOverElem = document.getElementById('gameOver');
+  gameOverElem.classList.remove('gameOver')
+  gameOverElem.innerHTML = "&nbsp"
+  playAgainEl = document.getElementById('playAgain');
+  playAgainEl.style.display='none';
+  
 }
 
 function squareClicked(event){
