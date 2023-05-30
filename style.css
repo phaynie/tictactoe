@@ -1,4 +1,4 @@
-/*Color pallate*/
+/*Color palette*/
 /*light yellow #e9f089*/
 /*#f14e4e - red - 'Game Over'*/
 /*#f1bb4e - Yellow - 'Player'*/
@@ -12,13 +12,17 @@
 body {
 }
 
+div {
+  border-style: 1px solid red;
+}
+
 .container {
   display: grid;
   width: 50%;
   height: auto;
   margin: auto;
   background: #ded9d1;
-  justify-content: center;\
+  justify-content: center;
   
 }
 
@@ -26,6 +30,7 @@ body {
   padding-top: 40px;
   text-align: center;
   color: #f14ebd;
+ //text-shadow: 1px 1px 2px;
 }
 
 .gridContainer {
@@ -46,6 +51,19 @@ body {
   grid-template-columns: repeat(3, 100px);
   grid-gap: 7px;
 }
+
+.row {
+  display: flex;
+
+}
+
+.column {
+  flex: 50%;
+  padding: 10px;
+  
+}
+
+
 
 .player {
   border-radius:10px;
