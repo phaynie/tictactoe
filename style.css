@@ -1,15 +1,7 @@
-/*Color palette*/
-/*light yellow #e9f089*/
-/*#f14e4e - red - 'Game Over'*/
-/*#f1bb4e - Yellow - 'Player'*/
-/*#84f14e - limegreen - ''*/
-/*#4ef18f - green - ''*/
-/*#4e9af1 - blue - ''*/
-/*9a4ef1 - purple - ''*/
-/*#f14ebd - pink - ''*/
-/*#ded9d1 - lt grey - ''*/
+
 /*css variables 
-creating a variable with global scope*/
+creating a variable with global scope
+color Palette*/
 :root {
   --yellow: #f1bb4e;
   --limeGreen: #84f14e;
@@ -20,11 +12,12 @@ creating a variable with global scope*/
 }
 
 body {
+  min-width: 100%;
 }
 
-div {
-  border-style: 1px solid red;
-}
+ div {
+  border: 1px solid red;
+} 
 
 .container {
   display: grid;
