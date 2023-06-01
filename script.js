@@ -1,5 +1,7 @@
+
+
 let playerOne = true;
-document.getElementById('p1').style.backgroundColor = "#f1bb4e";
+document.getElementById('p1').style.backgroundColor = "var(--yellow)";
 
 document.getElementById('pos1').addEventListener('click', squareClicked);
 document.getElementById('pos2').addEventListener('click', squareClicked);
@@ -16,12 +18,12 @@ document.getElementById('pos9').addEventListener('click', squareClicked);
 
 function playerBackgroundColor() {
   if(playerOne) {
-    document.getElementById('p1').style.backgroundColor = "#f1bb4e";
+    document.getElementById('p1').style.backgroundColor = "var(--yellow)";
     document.getElementById('p2').style.backgroundColor = '#ded9d1';
     
   }else if(playerOne == false) {
     document.getElementById('p1').style.backgroundColor = "#ded9d1";
-    document.getElementById('p2').style.backgroundColor = "#f1bb4e"; 
+    document.getElementById('p2').style.backgroundColor = "var(--yellow)"; 
     
   }
  
@@ -64,7 +66,7 @@ function isThereAWinner() {
   if((elPos1.innerHTML === "X" && elPos2.innerHTML === "X" && elPos3.innerHTML === "X") || (elPos4.innerHTML === "X" && elPos5.innerHTML === "X" && elPos6.innerHTML === "X") || (elPos7.innerHTML === "X" && elPos8.innerHTML === "X" && elPos9.innerHTML === "X") || (elPos1.innerHTML === "X" && elPos4.innerHTML === "X" && elPos7.innerHTML === "X") || (elPos2.innerHTML === "X" && elPos5.innerHTML === "X" && elPos8.innerHTML === "X") || (elPos3.innerHTML === "X" && elPos6.innerHTML === "X" && elPos9.innerHTML === "X") || (elPos1.innerHTML === "X" && elPos5.innerHTML === "X" && elPos9.innerHTML === "X") || (elPos3.innerHTML === "X" && elPos5.innerHTML === "X" && elPos7.innerHTML === "X")) {
   document.getElementById('p1h').innerHTML = "Player One - You are the Winner!";
   document.getElementById('p1h').classList.add("blink");
-  document.getElementById('p1').style.backgroundColor = "#f1bb4e";
+  document.getElementById('p1').style.backgroundColor = "var(--yellow)";
   document.getElementById('p2').style.display = "none";
   
     removeEventListeners();
@@ -73,14 +75,14 @@ function isThereAWinner() {
   }else if((elPos1.innerHTML === "O" && elPos2.innerHTML === "O" && elPos3.innerHTML === "O") || (elPos4.innerHTML === "O" && elPos5.innerHTML === "O" && elPos6.innerHTML === "O") || (elPos7.innerHTML === "O" && elPos8.innerHTML === "O" && elPos9.innerHTML === "O") || (elPos1.innerHTML === "O" && elPos4.innerHTML === "O" && elPos7.innerHTML === "O") || (elPos2.innerHTML === "O" && elPos5.innerHTML === "O" && elPos8.innerHTML === "O") || (elPos3.innerHTML === "O" && elPos6.innerHTML === "O" && elPos9.innerHTML === "O") || (elPos1.innerHTML === "O" && elPos5.innerHTML === "O" && elPos9.innerHTML === "O") || (elPos3.innerHTML === "O" && elPos5.innerHTML === "O" && elPos7.innerHTML === "O")) {
     document.getElementById('p2h').innerHTML = "Player Two - You are the Winner!";
     document.getElementById('p2h').classList.add("blink");
-    document.getElementById('p2').style.backgroundColor = "#f1bb4e";
+    document.getElementById('p2').style.backgroundColor = "var(--yellow)";
     document.getElementById('p1').style.display = "none";
     removeEventListeners();
 
   }else if(((elPos1.innerHTML === "X" || elPos1.innerHTML === "O") && (elPos2.innerHTML === "X" || elPos2.innerHTML === "O") && (elPos3.innerHTML === "X" || elPos3.innerHTML === "O") && (elPos4.innerHTML === "X" || elPos4.innerHTML === "O") && (elPos5.innerHTML === "X" || elPos5.innerHTML === "O") && (elPos6.innerHTML === "X" || elPos6.innerHTML === "O") && (elPos7.innerHTML === "X" || elPos7.innerHTML === "O") && (elPos8.innerHTML === "X" || elPos8.innerHTML === "O") && (elPos9.innerHTML === "X" || elPos9.innerHTML === "O") )) {
     document.getElementById('p2h').innerHTML = " Bummer, No Winner!";
     document.getElementById('p2h').classList.add("blink");
-    document.getElementById('p2').style.backgroundColor = "#f14ebd";
+    document.getElementById('p2').style.backgroundColor = "var(--pink)";
     document.getElementById('p1').style.display = "none";
     removeEventListeners();
   }
@@ -117,7 +119,7 @@ function gameOverPlayAgain () {
 
 function newGame(event) {
   playerOne = true;
-  document.getElementById('p1').style.backgroundColor = "#f1bb4e";
+  document.getElementById('p1').style.backgroundColor = "var(--yellow)";
   document.getElementById('p1h').innerHTML="Player One";
   document.getElementById('p1h').classList.remove("blink");
   document.getElementById('p1').style.display="block"

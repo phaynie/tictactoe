@@ -3,11 +3,21 @@
 /*#f14e4e - red - 'Game Over'*/
 /*#f1bb4e - Yellow - 'Player'*/
 /*#84f14e - limegreen - ''*/
-/*#4efl8f - green - ''*/
-/*#4e9afl - blue - ''*/
-/*9a4efl - purple - ''*/
+/*#4ef18f - green - ''*/
+/*#4e9af1 - blue - ''*/
+/*9a4ef1 - purple - ''*/
 /*#f14ebd - pink - ''*/
 /*#ded9d1 - lt grey - ''*/
+/*css variables 
+creating a variable with global scope*/
+:root {
+  --yellow: #f1bb4e;
+  --limeGreen: #84f14e;
+  --blue: #0000FF; /*same as named color blue*/
+  --pink: #f14ebd;
+  --ltGrey: #ded9d1;
+  --white: #ffffff;
+}
 
 body {
 }
@@ -21,7 +31,7 @@ div {
   width: 50%;
   height: auto;
   margin: auto;
-  background: #ded9d1;
+  background: var(--ltGrey);
   justify-content: center;
   
 }
@@ -29,7 +39,7 @@ div {
 .title {
   padding-top: 40px;
   text-align: center;
-  color: #f14ebd;
+  color: var(--pink);
  //text-shadow: 1px 1px 2px;
 }
 
@@ -95,7 +105,7 @@ div {
   font-family: Arial;
   font-size: 3rem;
   font-weight: bold;
-  background: #ded9d1;
+  background: var(--ltGrey);
 }
 
 .gameOver {
@@ -103,8 +113,8 @@ div {
   font-weight: bold;
   height: 50px;
   width: 300px;
-  background: #ded9d1;
-  color: blue;
+  background: var(--ltGrey);
+  color: var(--blue);
   margin: auto;
   text-align: center;
   font-size: 2rem;
@@ -128,8 +138,8 @@ button {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white);
   text-align: center;
-  background-color: #84f14e;
+  background-color: var(--limeGreen);
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
 }
