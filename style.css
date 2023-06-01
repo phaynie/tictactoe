@@ -15,9 +15,9 @@ body {
   min-width: 100%;
 }
 
- div {
+ /* div {
   border: 1px solid red;
-} 
+}  */
 
 .container {
   display: grid;

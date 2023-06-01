@@ -3,15 +3,12 @@
 let playerOne = true;
 document.getElementById('p1').style.backgroundColor = "var(--yellow)";
 
-document.getElementById('pos1').addEventListener('click', squareClicked);
-document.getElementById('pos2').addEventListener('click', squareClicked);
-document.getElementById('pos3').addEventListener('click', squareClicked);
-document.getElementById('pos4').addEventListener('click', squareClicked);
-document.getElementById('pos5').addEventListener('click', squareClicked);
-document.getElementById('pos6').addEventListener('click', squareClicked);
-document.getElementById('pos7').addEventListener('click', squareClicked);
-document.getElementById('pos8').addEventListener('click', squareClicked);
-document.getElementById('pos9').addEventListener('click', squareClicked);
+const squares = ['pos1', 'pos2', 'pos3', 'pos4', 'pos5', 'pos6', 'pos7', 'pos8', 'pos9',];
+
+squares.forEach((square) =>{
+  document.getElementById(square).addEventListener('click', squareClicked);
+});
+
 
 
 
@@ -19,10 +16,10 @@ document.getElementById('pos9').addEventListener('click', squareClicked);
 function playerBackgroundColor() {
   if(playerOne) {
     document.getElementById('p1').style.backgroundColor = "var(--yellow)";
-    document.getElementById('p2').style.backgroundColor = '#ded9d1';
+    document.getElementById('p2').style.backgroundColor = "var(--ltGrey)";
     
   }else if(playerOne == false) {
-    document.getElementById('p1').style.backgroundColor = "#ded9d1";
+    document.getElementById('p1').style.backgroundColor = "var(--ltGrey)";
     document.getElementById('p2').style.backgroundColor = "var(--yellow)"; 
     
   }
@@ -115,15 +112,10 @@ function isThereAWinner() {
 }
   
 function removeEventListeners() {
-  document.getElementById('pos1').removeEventListener('click', squareClicked);
-  document.getElementById('pos2').removeEventListener('click', squareClicked);
-  document.getElementById('pos3').removeEventListener('click', squareClicked);
-  document.getElementById('pos4').removeEventListener('click', squareClicked);
-  document.getElementById('pos5').removeEventListener('click', squareClicked);
-  document.getElementById('pos6').removeEventListener('click', squareClicked);
-  document.getElementById('pos7').removeEventListener('click', squareClicked);
-  document.getElementById('pos8').removeEventListener('click', squareClicked);
-  document.getElementById('pos9').removeEventListener('click', squareClicked);
+  squares.forEach((square) =>{
+    document.getElementById(square).removeEventListener('click', squareClicked);
+  });
+ 
 
   gameOverPlayAgain();
 }
@@ -149,26 +141,11 @@ function newGame(event) {
   document.getElementById('p2h').classList.remove("blink");
   document.getElementById('p2').style.display="block";
   
+  squares.forEach((square) =>{
+    document.getElementById(square).addEventListener('click', squareClicked);
+    document.getElementById(square).innerHTML='&nbsp';
+  });
   
-  
-  document.getElementById('pos1').addEventListener('click', squareClicked);
-  document.getElementById('pos1').innerHTML='&nbsp';
-  document.getElementById('pos2').addEventListener('click', squareClicked);
-  document.getElementById('pos2').innerHTML='&nbsp';
-  document.getElementById('pos3').addEventListener('click', squareClicked);
-  document.getElementById('pos3').innerHTML='&nbsp';
-  document.getElementById('pos4').addEventListener('click', squareClicked);
-  document.getElementById('pos4').innerHTML='&nbsp';
-  document.getElementById('pos5').addEventListener('click', squareClicked);
-  document.getElementById('pos5').innerHTML='&nbsp';
-  document.getElementById('pos6').addEventListener('click', squareClicked);
-  document.getElementById('pos6').innerHTML='&nbsp';
-  document.getElementById('pos7').addEventListener('click', squareClicked);
-  document.getElementById('pos7').innerHTML='&nbsp';
-  document.getElementById('pos8').addEventListener('click', squareClicked);
-  document.getElementById('pos8').innerHTML='&nbsp';
-  document.getElementById('pos9').addEventListener('click', squareClicked); 
-  document.getElementById('pos9').innerHTML='&nbsp';
   gameOverElem = document.getElementById('gameOver');
   gameOverElem.classList.remove('gameOver')
   gameOverElem.innerHTML = "&nbsp"
